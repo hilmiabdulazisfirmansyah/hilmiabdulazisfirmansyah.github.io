@@ -1,0 +1,106 @@
+/* 
+WPU EVENT
+
+Format:
+Gunakan HTML dan CSS untuk membuat desain bendera Palestina tanpa menggunakan gambar.
+Pastikan struktur HTML dan gaya CSS memenuhi standar praktik terbaik.
+
+Warna dan Proporsi:
+Gunakan hexa kode warna standar untuk bendera Palestina: 
+Hijau (#008000)
+Putih (#FFFFFF)
+Merah (#FF0000)
+Hitam (#000000)
+Jaga proporsi dan rasio ukuran elemen bendera.
+
+Responsif:
+Desain bendera harus responsif, memenuhi dan menyesuaikan ukuran browser dengan baik.
+
+Penyerahan:
+Kirim hasil pekerjaan Anda yang telah dihosting menggunakan GitHub Pages melalui DM ke akun @# 💡 help-read-me sebelum tanggal 17 Desember 2023 pukul 18 WIB.
+
+Pemenang ditentukan berdasarkan jumlah kode yang paling optimal (sedikit) dengan tetap memenuhi ketentuan yang tertulis di atas.
+
+
+*/
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.palestine{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    animation: flag 1.8s ease-in-out infinite alternate;
+}
+
+.flag {
+    width: 300px;
+    height: 200px;
+    position: relative; 
+}
+
+.stripe {
+    height: 33.33%;
+    width: 100%;
+}
+
+.black {
+    background-color: #000000;
+}
+
+.white {
+    background-color: #FFFFFF;
+}
+
+.green {
+    background-color: #008000;
+    box-shadow: grey 0px 358px 42px;
+}
+
+.red-triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 100px 0 100px 100px;
+    border-color: transparent transparent transparent #FF0000;
+    z-index: 1;
+    animation: flag 1.8s ease-in-out infinite alternate;
+}
+
+.pole {
+    position: absolute;
+    left: 0;
+    transform: translateX(-50%);
+    background-color: black;
+    width: 10px;
+    height: 500px; 
+    border-radius: 5px;
+    z-index: 2;
+  }
+
+  @keyframes flag {
+    0% {
+        width: 0%;
+        border-width: 100px 0 100px 0px;
+        transform: skewY(-1deg) skewX(0deg) scale(1);
+    }
+    50%{
+        width: 100%;
+        border-width: 100px 0 100px 100px;
+        transform: skewY(-1deg) skewX(0deg) scale(1);
+    }
+    100%{
+        width: 0%;
+        border-width: 100px 0 100px 0px;
+        transform: skewY(-1deg) skewX(0deg) scale(1);
+    }
+}
